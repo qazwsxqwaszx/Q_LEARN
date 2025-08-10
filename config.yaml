@@ -1,0 +1,52 @@
+application:
+  name: Quantum Mechanics Interactive
+  version: 0.1.0
+  theme: default
+  language: en
+
+paths:
+  assets: assets/
+  data: data/
+  logs: logs/
+
+gui:
+  window:
+    title: Quantum Mechanics Interactive
+    width: 1280
+    height: 720
+    maximized: false
+  theme:
+    primary_color: "#2196F3"
+    secondary_color: "#FF4081"
+    background_color: "#FFFFFF"
+    text_color: "#000000"
+
+simulation:
+  default_timestep: 0.01
+  max_iterations: 1000
+  precision: 1e-6
+  use_gpu: false
+
+visualization:
+  fps: 30
+  plot_style: "seaborn"
+  colormap: "viridis"
+  animation_duration: 2.0
+
+physics:
+  units: "atomic"
+  constants:
+    hbar: 1.0
+    mass_electron: 1.0
+    coulomb_constant: 1.0
+
+ai_assistant:
+  enabled: true
+  model: "gpt-3.5-turbo"
+  temperature: 0.7
+  max_tokens: 150
+
+logging:
+  level: INFO
+  file: quantum_mechanics.log
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

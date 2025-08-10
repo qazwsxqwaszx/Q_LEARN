@@ -1,0 +1,3 @@
+"""
+Symbolic computation module
+"""

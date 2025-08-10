@@ -7,14 +7,14 @@ GUI application and unit tests without requiring heavy dependencies.
 from __future__ import annotations
 
 import math
-from typing import Callable
+
 
 import numpy as np
 
+from .constants import HBAR, M_ELECTRON
+
 __all__ = ["wavefunction", "energy_level"]
 
-# Physical constant: reduced Planck constant (J·s)
-HBAR: float = 1.054_571_817e-34
 
 
 def wavefunction(n: int, x: float | np.ndarray, length: float) -> np.ndarray:
@@ -42,7 +42,9 @@ def wavefunction(n: int, x: float | np.ndarray, length: float) -> np.ndarray:
     return prefactor * np.sin(n * math.pi * x_arr / length)
 
 
-def energy_level(n: int, length: float, mass: float = 9.109_383_56e-31) -> float:
+
+def energy_level(n: int, length: float, mass: float = M_ELECTRON) -> float:
+
     """Return the energy ``E_n`` of the ``n`` th level in Joules.
 
     Parameters

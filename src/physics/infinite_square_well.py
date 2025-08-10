@@ -8,11 +8,13 @@ from __future__ import annotations
 
 import math
 
+
 import numpy as np
 
 from .constants import HBAR, M_ELECTRON
 
 __all__ = ["wavefunction", "energy_level"]
+
 
 
 def wavefunction(n: int, x: float | np.ndarray, length: float) -> np.ndarray:
@@ -40,7 +42,9 @@ def wavefunction(n: int, x: float | np.ndarray, length: float) -> np.ndarray:
     return prefactor * np.sin(n * math.pi * x_arr / length)
 
 
+
 def energy_level(n: int, length: float, mass: float = M_ELECTRON) -> float:
+
     """Return the energy ``E_n`` of the ``n`` th level in Joules.
 
     Parameters
